@@ -35,6 +35,7 @@ Route::get('posts/{post}/comments/{comment}', function($post,$comment){
 Route::namespace('App\Http\Controllers')->group(function(){
     Route::get('login/{id?}','SiteController@login');
     Route::get('/hello','SiteController@hello');
+    Route::get('showGallery','SiteController@showGallery');
 });
 
 Route::get('posts/{post?}/comments/{comment?}', 'App\Http\Controllers\PostCommentTest@pctest');

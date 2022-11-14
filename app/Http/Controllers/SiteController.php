@@ -15,4 +15,8 @@ class SiteController extends Controller
             return view('login');
         }
     }
+
+    public function showGallery(){
+        return view('gallery');
+    }
 }
