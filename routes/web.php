@@ -17,9 +17,12 @@ Route::get('/', function () {   //Closure Function
     return view('welcome');
 });
 
-Route::get('/hello','App\Http\Controllers\SiteController@hello');
 
-Route::get('/users/{id?}','App\Http\Controllers\UserController@show');
+
+Route::prefix('/users')->group(function(){
+    Route::get('{id?}','App\Http\Controllers\UserController@show');
+    Route::get('/','App\Http\Controllers\UserController@show');
+});
 
 /*
 Route::get('posts/{post}/comments/{comment}', function($post,$comment){
@@ -27,6 +30,14 @@ Route::get('posts/{post}/comments/{comment}', function($post,$comment){
 });
 */
 
+
+
+Route::namespace('App\Http\Controllers')->group(function(){
+    Route::get('login/{id?}','SiteController@login');
+    Route::get('/hello','SiteController@hello');
+});
+
 Route::get('posts/{post?}/comments/{comment?}', 'App\Http\Controllers\PostCommentTest@pctest');
 
-Route::get('login/{id?}','App\Http\Controllers\SiteController@login');
+Route::middleware(['auth'])->group(function(){
+});
