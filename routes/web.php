@@ -21,6 +21,10 @@ Route::get('/hello','App\Http\Controllers\SiteController@hello');
 
 Route::get('/users/{id?}','App\Http\Controllers\UserController@show');
 
+/*
 Route::get('posts/{post}/comments/{comment}', function($post,$comment){
     return "posts $post , comments $comment";
 });
+*/
+
+Route::get('posts/{post?}/comments/{comment?}', 'App\Http\Controllers\PostCommentTest@pctest');
