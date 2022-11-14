@@ -28,3 +28,5 @@ Route::get('posts/{post}/comments/{comment}', function($post,$comment){
 */
 
 Route::get('posts/{post?}/comments/{comment?}', 'App\Http\Controllers\PostCommentTest@pctest');
+
+Route::get('login/{id?}','App\Http\Controllers\SiteController@login');
