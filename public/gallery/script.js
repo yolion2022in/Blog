@@ -15,38 +15,48 @@
 			// },
 			{
 				title: "棄佛入魔 - 殘雪",
-				url: 'https://www.youtube.com/embed/LUBSTdjthnc',	//"https://www.youtube.com/watch?v=LUBSTdjthnc",
+				url: 'https://www.youtube.com/embed/LUBSTdjthnc?autoplay=1',	//"https://www.youtube.com/watch?v=LUBSTdjthnc",
 				thumb: "https://img.youtube.com/vi/LUBSTdjthnc/1.jpg"
 			},
 			{
 				title: "無期 - 光頭華夏",
-				url: 'https://www.youtube.com/embed/biRiUL3u2v0',
+				url: 'https://www.youtube.com/embed/biRiUL3u2v0??playlist=biRiUL3u2v0&loop=1&autoplay=1',
 				thumb: "https://img.youtube.com/vi/biRiUL3u2v0/1.jpg"
 			},
 			{
 				title: "我這一生 - 半噸兄弟 (馬健濤)",
-				url: 'https://www.youtube.com/embed/kQjwEs1k69I',
+				url: 'https://www.youtube.com/embed/kQjwEs1k69I?autoplay=1',
 				thumb: "https://img.youtube.com/vi/kQjwEs1k69I/1.jpg"
 			},
 			{
 				title: "本無 - 光頭華夏",
-				url: 'https://www.youtube.com/embed/OJq7qksbMBU',
+				url: 'https://www.youtube.com/embed/OJq7qksbMBU?autoplay=1',
 				thumb: "https://img.youtube.com/vi/OJq7qksbMBU/1.jpg"
 			},
 			{
 				title: "孤芳自賞 - 楊小壯",
-				url: 'https://www.youtube.com/embed/uIxnUXz1ju8',
+				url: 'https://www.youtube.com/embed/uIxnUXz1ju8?autoplay=1',
 				thumb: "https://img.youtube.com/vi/uIxnUXz1ju8/1.jpg"
 			},
 			{
 				title: "Something Just Like This",
-				url: 'https://www.youtube.com/embed/OJ7gRR-z4bY',
+				url: 'https://www.youtube.com/embed/OJ7gRR-z4bY?autoplay=1',
 				thumb: "https://img.youtube.com/vi/OJ7gRR-z4bY/1.jpg"
 			},
 			{
-				title: "天使的翅膀",
-				url: 'https://www.youtube.com/embed/BIzvvsBbwOs',
+				title: "天使的翅膀 - 徐譽滕",
+				url: 'https://www.youtube.com/embed/BIzvvsBbwOs?autoplay=1',
 				thumb: "https://img.youtube.com/vi/BIzvvsBbwOs/1.jpg"
+			},
+			{
+				title: "月老掉線 - 王不醒",
+				url: 'https://www.youtube.com/embed/1zjeruuymO0?autoplay=1',
+				thumb: "https://img.youtube.com/vi/1zjeruuymO0/1.jpg"
+			},
+			{
+				title: "醒不來的夢 - 回小仙",
+				url: 'https://www.youtube.com/embed/pkv7uWILF_c?autoplay=1',
+				thumb: "https://img.youtube.com/vi/pkv7uWILF_c/1.jpg"
 			},
 
 
@@ -56,8 +66,8 @@
 			// 	thumb: "https://b.vimeocdn.com/ts/431/797/431797120_100.jpg"
 			// }
 			{
-				title: "兄弟抱一下",
-				url: 'https://www.youtube.com/embed/O_cyIdH8j9k',
+				title: "兄弟抱一下 - 龐龍",
+				url: 'https://www.youtube.com/embed/O_cyIdH8j9k?autoplay=1',
 				thumb: "https://img.youtube.com/vi/O_cyIdH8j9k/1.jpg"
 			}	//end 無逗號
 		];
