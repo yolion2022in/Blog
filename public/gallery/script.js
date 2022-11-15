@@ -8,21 +8,58 @@
 	var numOfImages = window.location.search ? parseInt(window.location.search.match(/\d+$/)[0]) : 70,
 		gallery = $('#gallery'),
 		videos = [
+			// {
+			// 	title: "Victoria's Secret",
+			// 	url: "https://player.vimeo.com/video/8974462?byline=0&portrait=0",
+			// 	thumb: "https://b.vimeocdn.com/ts/432/699/43269900_100.jpg"
+			// },
 			{
-				title: "Victoria's Secret",
-				url: "https://player.vimeo.com/video/8974462?byline=0&portrait=0",
-				thumb: "https://b.vimeocdn.com/ts/432/699/43269900_100.jpg"
-			},
-			{
-				title: "PEOPLE ARE AWESOME 2013 FULL HD ",
+				title: "棄佛入魔 - 殘雪",
 				url: 'https://www.youtube.com/embed/LUBSTdjthnc',	//"https://www.youtube.com/watch?v=LUBSTdjthnc",
-				thumb: "https://img.youtube.com/vi/W3OQgh_h4U4/0.jpg"
+				thumb: "https://img.youtube.com/vi/LUBSTdjthnc/1.jpg"
 			},
 			{
-				title: "Biting Elbows - 'Bad Motherfucker' Official Music Video",
-				url: "https://player.vimeo.com/video/62092214?byline=0&portrait=0",
-				thumb: "https://b.vimeocdn.com/ts/431/797/431797120_100.jpg"
-			}
+				title: "無期 - 光頭華夏",
+				url: 'https://www.youtube.com/embed/biRiUL3u2v0',
+				thumb: "https://img.youtube.com/vi/biRiUL3u2v0/1.jpg"
+			},
+			{
+				title: "我這一生 - 半噸兄弟 (馬健濤)",
+				url: 'https://www.youtube.com/embed/kQjwEs1k69I',
+				thumb: "https://img.youtube.com/vi/kQjwEs1k69I/1.jpg"
+			},
+			{
+				title: "本無 - 光頭華夏",
+				url: 'https://www.youtube.com/embed/OJq7qksbMBU',
+				thumb: "https://img.youtube.com/vi/OJq7qksbMBU/1.jpg"
+			},
+			{
+				title: "孤芳自賞 - 楊小壯",
+				url: 'https://www.youtube.com/embed/uIxnUXz1ju8',
+				thumb: "https://img.youtube.com/vi/uIxnUXz1ju8/1.jpg"
+			},
+			{
+				title: "Something Just Like This",
+				url: 'https://www.youtube.com/embed/OJ7gRR-z4bY',
+				thumb: "https://img.youtube.com/vi/OJ7gRR-z4bY/1.jpg"
+			},
+			{
+				title: "天使的翅膀",
+				url: 'https://www.youtube.com/embed/BIzvvsBbwOs',
+				thumb: "https://img.youtube.com/vi/BIzvvsBbwOs/1.jpg"
+			},
+
+
+			// {
+			// 	title: "Biting Elbows - 'Bad Motherfucker' Official Music Video",
+			// 	url: "https://player.vimeo.com/video/62092214?byline=0&portrait=0",
+			// 	thumb: "https://b.vimeocdn.com/ts/431/797/431797120_100.jpg"
+			// }
+			{
+				title: "兄弟抱一下",
+				url: 'https://www.youtube.com/embed/O_cyIdH8j9k',
+				thumb: "https://img.youtube.com/vi/O_cyIdH8j9k/1.jpg"
+			}	//end 無逗號
 		];
 		
     // Get some photos from Flickr for the demo
