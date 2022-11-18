@@ -44,5 +44,4 @@ Route::get('posts/{post?}/comments/{comment?}', 'App\Http\Controllers\PostCommen
 Route::middleware(['auth'])->group(function(){
 });
 
-// Route::resource('posts', 'App\Http\Controllers\PostController');
-Route::apiResource('posts', 'App\Http\Controllers\Api\PostController');
+Route::resource('posts', 'App\Http\Controllers\PostController');
