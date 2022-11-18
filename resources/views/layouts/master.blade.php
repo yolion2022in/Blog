@@ -7,7 +7,11 @@
     @yield('css')
 </head>
 <body>
-    @yield('content')
+    {{-- @yield('content') --}}
+    {{-- 特例形況下，section ... show 也可以是挖洞 --}}
+    @section('content')
+        <div style='color:green'>可被選擇繼承的內容</div>
+    @show
 
     @yield('js')
 </body>

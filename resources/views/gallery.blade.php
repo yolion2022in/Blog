@@ -3,6 +3,7 @@
 @section('title', '動靜態相簿')
 
 @section('content')
+  @parent {{--  繼承master  --}}
   <div style='color:red;'>內容區塊 test</div>
 
   <!-- partial:index.partial.html -->
