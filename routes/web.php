@@ -36,9 +36,13 @@ Route::namespace('App\Http\Controllers')->group(function(){
     Route::get('login/{id?}','SiteController@login');
     Route::get('/hello','SiteController@hello');
     Route::get('showGallery','SiteController@showGallery');
+    Route::get('/demo', 'SiteController@demo');
 });
 
 Route::get('posts/{post?}/comments/{comment?}', 'App\Http\Controllers\PostCommentTest@pctest');
 
 Route::middleware(['auth'])->group(function(){
 });
+
+// Route::resource('posts', 'App\Http\Controllers\PostController');
+Route::apiResource('posts', 'App\Http\Controllers\Api\PostController');
