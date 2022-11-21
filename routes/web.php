@@ -37,6 +37,7 @@ Route::namespace('App\Http\Controllers')->group(function(){
     Route::get('/hello','SiteController@hello');
     Route::get('showGallery','SiteController@showGallery');
     Route::get('/demo', 'SiteController@demo');
+    Route::get('/ec','EclabController@index');
 });
 
 Route::get('posts/{post?}/comments/{comment?}', 'App\Http\Controllers\PostCommentTest@pctest');
