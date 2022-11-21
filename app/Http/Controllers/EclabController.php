@@ -12,9 +12,9 @@ class EclabController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($arg = 'home')
     {
-        return view('ec.pages.portal');
+        return $arg=='portal' ? view('ec.pages.portal') : view('ec.pages.home');
     }
 
     /**
