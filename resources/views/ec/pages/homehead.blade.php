@@ -10,6 +10,8 @@
     <link rel="icon" type="image/x-icon" href="https://fs-a.ecimg.tw/img/icon/24-64x64.ico" sizes="64x64">
     <link rel="icon" type="image/x-icon" href="https://fs-b.ecimg.tw/img/icon/24-32x32.ico" sizes="32x32">
     <link rel="icon" type="image/x-icon" href="https://fs-c.ecimg.tw/img/icon/24-16x16.ico" sizes="16x16">
+    {{-- <link rel="stylesheet" href="https://shopping.pchome.com.tw/index/v1/packages/ui/build/assets/bundle.css"> --}}
+
 @endsection
 
 @section('script')
@@ -33,10 +35,13 @@
     <script>
     (asynpchomead = window.asynpchomead || []).push({})
     </script>
-    <script defer="defer" src="/index/v1/frontend/static/js/main.b22a6239.js"></script>
+    {{-- <script defer="defer" src="/index/v1/frontend/static/js/main.b22a6239.js"></script> --}}
+    <script defer="defer" src="https://shopping.pchome.com.tw/index/v1/frontend/static/js/main.b22a6239.js"></script>
 
     {{-- <link href="/index/v1/frontend/static/css/main.ccc7ce8f.css" rel="stylesheet"> --}}
     <link href="https://shopping.pchome.com.tw/index/v1/frontend/static/css/main.ccc7ce8f.css" rel="stylesheet">
+    {{-- <link rel="stylesheet" href="https://shopping.pchome.com.tw/index/v1/packages/ui/build/assets/bundle.css"> --}}
+
 
     <script>
     try {
