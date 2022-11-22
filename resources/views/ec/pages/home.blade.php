@@ -3,13 +3,13 @@
 @extends('ec.master.home');
 
 {{-- 
-    @section('title','Welcome to Fake Pchome'); 
+    @section('title','Welcome to Fake MoMo'); 
     測試由 master default give value.
 --}}
 
 @section('content')
     @parent
-    <h3 style='color:blue'>Fake Pchome 子頁面內容</h3>
+    <h3 style='color:blue'>Fake MoMo 子頁面內容</h3>
     <hr/>
 
     @include('ec.pages.homebody')
