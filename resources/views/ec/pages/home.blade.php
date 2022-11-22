@@ -2,10 +2,9 @@
 
 @extends('ec.master.home');
 
-{{-- 
-    @section('title','Welcome to Fake MoMo'); 
-    測試由 master default give value.
---}}
+@include('ec.pages.homehead')
+
+
 
 @section('content')
     @parent

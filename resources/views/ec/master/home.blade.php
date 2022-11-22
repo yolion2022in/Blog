@@ -16,7 +16,7 @@
   <body>
     @section('content')
         <hr/>
-        <div style='color:goldenrod'>Master Fake Pchome</div>
+        <h1 style='color:goldenrod'>Master Fake MoMo 線上購物</h1>
         <hr/>
     @show
   </body>

@@ -14,8 +14,8 @@ class EclabController extends Controller
      */
     public function index($arg = 'home')
     {
-        // return $arg=='portal' ? view('ec.pages.portal') : view('ec.pages.home');
-        return view('ec.pages.temp');
+        return $arg=='portal' ? view('ec.pages.portal') : view('ec.pages.home');
+        // return view('ec.pages.temp');
     }
 
     /**
