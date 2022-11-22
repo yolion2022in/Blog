@@ -62,8 +62,8 @@
         ChangeHttps();
         }
         function ChangeHttps() {
-        
-            location.replace('https://www.momoshop.com.tw/main/Main.jsp');
+            // 可惡的自動跳轉，終於抓到你！
+            // location.replace('https://www.momoshop.com.tw/main/Main.jsp');
         
         }
     }
