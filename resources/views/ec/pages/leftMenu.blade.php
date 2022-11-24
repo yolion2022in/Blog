@@ -1,18 +1,6 @@
 {{-- from  ec.pages.homeBody.blade.php --}}
 
 {{-- 
-    @foreach ($teams as $key => $team)
-        {{ str_ordinal($key + 1) }}
-    @endforeach
-
-    @foreach($products as $key => $value)
-        <p>{{ $value }}</p>
-    @endforeach
-
-    "" ?: javascript:;
- --}}
-
-{{-- 
     $momo_package = [
         'obj' => [
             //leftMenu Package
