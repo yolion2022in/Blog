@@ -27,16 +27,13 @@ class EclabController extends Controller
                 'js_script' => " <br/> &nbsp; <script>conso.info(\'log test\')</script>",
                 //leftMenu Package
                 'leftMenuPackage' => [
-                    'aClass' => ['','appDownloadbtn insuranceBtn','appDownloadbtn','appDownloadbtn','appDownloadbtn','appDownloadbtn','appDownloadbtn'],
-                    'aHref' => ['/main/Main.jsp?cid=memb&oid=back2hp&mdiv=1099800000-bt_0_150_01-bt_0_150_01_e1&ctype=B',
-                                '/fuli/redirect.jsp?redirect_url=//www.momo5188.com',
-                                '/edm/edm.jsp?lpn=Nzpe4YTLgeM&n=1&cid=memb&oid=APP&mdiv=1099800000-bt_0_150_01-bt_0_150_01_e3',
-                                '/league/indexServlet?cid=memb&oid=league&mdiv=1099800000-bt_0_150_01-bt_0_150_01_e4',
-                                '/category/LgrpCategory.jsp?l_code=3200100000&cid=memb&oid=china&mdiv=1099800000-bt_0_150_01-bt_0_150_01_e5',
-                                '/category/LgrpCategory.jsp?l_code=4099900000&cid=memb&oid=china&mdiv=1099800000-bt_0_150_01-bt_0_150_01_e6',
-                                ''
-                                ],
-                    'aTitle' => ['首頁','momo富立保險','APP','點點賺','直配大陸','書店',''],
+                    ['','/main/Main.jsp?cid=memb&oid=back2hp&mdiv=1099800000-bt_0_150_01-bt_0_150_01_e1&ctype=B','首頁'],
+                    ['appDownloadbtn insuranceBtn','/fuli/redirect.jsp?redirect_url=//www.momo5188.com','momo富立保險'],
+                    ['appDownloadbtn','/edm/edm.jsp?lpn=Nzpe4YTLgeM&n=1&cid=memb&oid=APP&mdiv=1099800000-bt_0_150_01-bt_0_150_01_e3','APP'],
+                    ['appDownloadbtn','/league/indexServlet?cid=memb&oid=league&mdiv=1099800000-bt_0_150_01-bt_0_150_01_e4','點點賺'],
+                    ['appDownloadbtn','/category/LgrpCategory.jsp?l_code=3200100000&cid=memb&oid=china&mdiv=1099800000-bt_0_150_01-bt_0_150_01_e5','直配大陸'],
+                    ['appDownloadbtn','/category/LgrpCategory.jsp?l_code=4099900000&cid=memb&oid=china&mdiv=1099800000-bt_0_150_01-bt_0_150_01_e6','書店'],
+                    ['appDownloadbtn','','']
                 ],
                 //Class 262 Area
                 'class262area' => [
