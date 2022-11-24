@@ -15,11 +15,11 @@
 
   <body>
     @section('content')
-        <hr/>
+      <hr/>
         {!! $master_content !!}
         <div>語法：<pre>{{ $master_content }}</pre></div>
         <div>轉義後：<pre>{{{ $master_content }}}</pre></div>
-        <hr/>
+      <hr/>
     @show
   </body>
 </html>

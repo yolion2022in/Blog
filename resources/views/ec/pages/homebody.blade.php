@@ -91,7 +91,7 @@
     <div id="bt_0_layout_b250"> 
     <div id="bt_0_150_01" class="LBTRenew TOPBT" soc="getBtSelf,1099800000,bt_0_150_01"> 
       
-      @include('ec.pages.leftMenu')
+      @include('ec.pages.leftMenu', ['menuItem'=>'newItem'])
     
       <ul class="rightMenu"> 
       <li class="membername loginTxt"></li> 

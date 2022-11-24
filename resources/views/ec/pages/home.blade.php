@@ -8,9 +8,10 @@
 
 @section('content')
     @parent
+
     <h3 style='color:blue'>Fake MoMo 子頁面內容</h3>
     <hr/>
 
     @include('ec.pages.homeBody')
-@show
+@endsection
 
