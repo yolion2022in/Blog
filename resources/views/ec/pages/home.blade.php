@@ -2,7 +2,7 @@
 
 @extends('ec.master.home');
 
-@include('ec.pages.homehead')
+@include('ec.pages.homeHead')
 
 
 
@@ -11,6 +11,6 @@
     <h3 style='color:blue'>Fake MoMo 子頁面內容</h3>
     <hr/>
 
-    @include('ec.pages.homebody')
-@endsection
+    @include('ec.pages.homeBody')
+@show
 

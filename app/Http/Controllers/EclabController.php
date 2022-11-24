@@ -23,6 +23,7 @@ class EclabController extends Controller
                 'ecmjs' =>  '/ecm/js',
                 'ecmimg' => '/ecm/img',
                 'momogo' => 'momo購物網',
+                'master_content' => "<h1 style='color:goldenrod'>Master Fake MoMo 線上購物 @_@ !!!  </h1> <br/> &nbsp; <script>conso.info(\'log test\')</script>",
             ]
         ];
 
