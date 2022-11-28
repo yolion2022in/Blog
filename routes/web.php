@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SiteController;    //使用action路由必須
 
 /*
 |--------------------------------------------------------------------------
@@ -45,3 +46,25 @@ Route::middleware(['auth'])->group(function(){
 });
 
 Route::resource('posts', 'App\Http\Controllers\PostController');
+
+
+
+//url路由實驗
+Route::get('gy', function(){
+    return view('gallery');
+})->name('mygy');
+
+Route::get('/url', function(){
+    // return url('gy');   //method 1 一般路由
+    // return url('mygy'); //method 2 名稱路由
+    /*
+        method 3 action路由，需 use App\Http\Controllers\SiteController; 
+        ，否則會報錯：Action SiteController@demo not defined.
+    */
+    return action([SiteController::class, 'demo']);
+
+
+    // return url()->current();
+    // return url()->full();
+    // return url()->previous();
+});
