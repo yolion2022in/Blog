@@ -29,6 +29,7 @@ class ItemStoreRequest extends FormRequest
             'title' => 'required | max:10',
             // 'price' => 'required | min:0',
             // 'desc' => 'max:200'
+            'content' => 'required'
         ];
     }
 

@@ -35,6 +35,10 @@
                                     'style' => 'color:red;',
                                     'otherAttr' => '自訂屬性'
                                 ]) !!}
+    @error('title')
+        <div class="alert alert-danger" style='color:pink'>{{ $message }}</div>
+    @enderror  
+
     <br><br>
     {!! Form::label('content', '內文') !!}
     {!! Form::textarea('content', null, [
@@ -42,7 +46,10 @@
                                     'cols'=>60,
                                     'rows'=>20
                                 ]) !!}
-    
+    @error('content')
+        <div class="alert alert-danger" style='color:pink'>{{ $message }}</div>
+    @enderror
+
     <br><br>
     {!! Form::hidden('mode', 1) !!}
 
@@ -64,4 +71,11 @@
 
 {!! Form::close() !!}
 
+
+
+@if ($errors->any())
+    @foreach ($errors->all() as $error)
+        <div style="color:red">{{$error}}</div>
+    @endforeach
+@endif
 
