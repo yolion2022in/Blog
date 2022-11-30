@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\ItemStoreRequest;
+use App\Http\Requests\articleStoreRequest;
 
-class ItemController extends Controller
+class ArticleController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -25,18 +25,7 @@ class ItemController extends Controller
      */
     public function create()
     {
-        // dd('create');
-        $obj = [
-            'modes' => ['recommend'=>'編輯精選','season'=>'當季商品','cp'=>'超值商品'],
-            'mode' => 'cp'
-        ];
-        return view('items.create', $obj);
-
-        /*
-        $modes = ['recommend'=>'編輯精選','season'=>'當季商品','cp'=>'超值商品'];
-        $mode = 'cp';
-        return view('items.create', compact('modes', 'mode'));
-        */
+        return view('articles.create');
     }
 
     /**
@@ -45,7 +34,7 @@ class ItemController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(ItemStoreRequest $request)
+    public function store(articleStoreRequest $request)
     {
         return $request->all();
     }

@@ -49,6 +49,8 @@ Route::resource('posts', 'App\Http\Controllers\PostController');
 
 Route::resource('items', 'App\Http\Controllers\ItemController');
 
+Route::resource('articles', 'App\Http\Controllers\ArticleController');
+
 
 
 //url路由實驗

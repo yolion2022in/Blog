@@ -51,6 +51,13 @@
     @enderror
 
     <br><br>
+    {!! Form::label('status', '填入假文？') !!}<br>
+    是 {!! Form::radio('status', 1, false, ['id'=>'isfake', 'onclick'=>'m_click()']) !!}
+    {{-- 是 {!! Form::radio('status', 1, false, ['id'=>'isfake']) !!} --}}
+    否 {!! Form::radio('status', 0, true) !!}
+
+
+    <br><br>
     {!! Form::hidden('mode', 1) !!}
 
     <br><br>
@@ -59,10 +66,40 @@
     遊戲 {!! Form::checkbox('interest[]', 'game', true) !!}
     電影 {!! Form::checkbox('interest[]', 'movie', true) !!}
 
+
+
     <br><br>
-    {!! Form::label('status', '填入假文？') !!}<br>
-    是 {!! Form::radio('status', 1, false, ['id'=>'isfake', 'onclick'=>'validate()']) !!}
-    否 {!! Form::radio('status', 0, true) !!}
+    {!! Form::select('mode', $modes, $mode, ['placeholder' => '請選擇商品模式']) !!}
+
+
+    <br><br>
+    {!! Form::label('number', '數字', []) !!}
+    {!! Form::selectRange('number', 1, 10, 5, []) !!}
+    
+    <br><br>
+    {!! Form::label('pwd', '密碼', []) !!}
+    {!! Form::password('pwd', []) !!}
+
+    <br><br>
+    {!! Form::label('email', 'Email', []) !!}
+    {{ Form::email('email',null,[]) }}<br><br>
+    
+
+    <br><br>
+    {!! Form::label('date', '日期', []) !!}
+    {!! Form::date('date',null, []) !!}
+
+
+    <br><br>
+    {!! Form::label('age', '年齡', []) !!}
+    {!! Form::number('age', 0, ['min'=>18 , 'max'=>80]) !!}
+
+
+    <br><br>
+    {!! Form::label('pic', '圖片', []) !!}
+    {!! Form::file('pic', []) !!}
+
+
     
 
     <br><br>
