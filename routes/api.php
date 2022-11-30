@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\ApiItemController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,4 +21,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 // Route::apiResource('posts', 'App\Http\Controllers\Api\PostController');
 
+// Route::apiResource('items', 'ItemController@store');
+
+
+Route::apiResource('items', 'App\Http\Controllers\Api\ItemController');
 

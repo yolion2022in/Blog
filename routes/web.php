@@ -47,6 +47,8 @@ Route::middleware(['auth'])->group(function(){
 
 Route::resource('posts', 'App\Http\Controllers\PostController');
 
+Route::resource('items', 'App\Http\Controllers\ItemController');
+
 
 
 //url路由實驗
@@ -68,3 +70,6 @@ Route::get('/url', function(){
     // return url()->full();
     // return url()->previous();
 });
+
+
+// Route::post('/items', 'App\Http\Controllers\ItemController@store');
