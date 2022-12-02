@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class articleStoreRequest extends FormRequest
+class ArticleStoreRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,13 +24,13 @@ class articleStoreRequest extends FormRequest
     public function rules()
     {
         return [
-            'subject' => 'required | max:50',
-            // 'category' => 'required',
-            'desc' => 'required | max:400',
-            // 'status',
-            // 'sort' => 'required',
-            // 'enable_at',
-            // 'tags' 
+            'subject' => 'required | string | max:50',
+            'category' => 'required | integer',
+            'desc' => 'required | string | max:400',
+            'status' => 'boolean',
+            'sort' => 'required | integer',
+            'enable_at' => 'string',  //'date' ?
+            // 'tags' => 'string'   //如何於前台驗證套件將array to string
         ];
     }
 }

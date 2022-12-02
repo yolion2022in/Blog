@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
+use App\Services\CurlService;   //我建立 Services 資料夾 (有s) ???
 use App\Http\Controllers\Controller;
-use App\Http\Requests\articleStoreRequest;
+use App\Http\Requests\ArticleStoreRequest;
 
 class ArticleController extends Controller
 {
@@ -25,7 +27,13 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        return view('articles.create');
+        $result['fakeContent'] = CurlService::get('https://textgen.cqd.tw?format=plain&size=30');
+        $result['fakeTitle'] = mb_substr( $this -> mb_str_shuffle( $result['fakeContent'] ) ,0,8,"utf-8");   //取n個字
+        $result['errTipAttr'] = " class='alert alert-danger' style='color:pink' ";
+
+        return view('articles.create', $result);
+
+        // return view('articles.create');
     }
 
     /**
@@ -34,7 +42,7 @@ class ArticleController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(articleStoreRequest $request)
+    public function store(ArticleStoreRequest $request)
     {
         return $request->all();
     }
@@ -83,4 +91,20 @@ class ArticleController extends Controller
     {
         //
     }
+
+    //自訂中文(中日韓亞洲語系雙bytes)打亂 方法
+    public function mb_str_shuffle($str){ 
+
+        $ret = array();
+        $cotype = mb_detect_encoding($str);   //偵測編碼
+  
+        for ($i=0; $i<mb_strlen($str, $cotype); $i++){
+           array_push($ret, mb_substr($str, $i, 1, $cotype));
+        }
+  
+        shuffle($ret);
+        return join($ret);
+  
+     }
+  
 }
