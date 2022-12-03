@@ -4,9 +4,10 @@ namespace App\Http\Controllers;
 
 
 use Illuminate\Http\Request;
-use App\Services\CurlService;   //我建立 Services 資料夾 (有s) ???
+use App\Services\CurlService;   //我建立 Services 資料夾、 CurlService Class
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ArticleStoreRequest;
+use App\Services\GismoService;  //自訂小玩意 GismoService Class
 
 class ArticleController extends Controller
 {
@@ -28,7 +29,7 @@ class ArticleController extends Controller
     public function create()
     {
         $result['fakeContent'] = CurlService::get('https://textgen.cqd.tw?format=plain&size=30');
-        $result['fakeTitle'] = mb_substr( $this -> mb_str_shuffle( $result['fakeContent'] ) ,0,8,"utf-8");   //取n個字
+        $result['fakeTitle'] = GismoService::mb_substr_and_shuffle( $result['fakeContent']  ,8 );
         $result['errTipAttr'] = " class='alert alert-danger' style='color:pink' ";
 
         return view('articles.create', $result);
@@ -44,7 +45,26 @@ class ArticleController extends Controller
      */
     public function store(ArticleStoreRequest $request)
     {
-        return $request->all();
+        $data = $request->all();
+
+        if ($request->file('pic')->isValid()) {
+            //處理檔案上傳
+            if ($request->hasFile('pic')) {
+                $file = $request->file('pic');  //獲取UploadFile例項
+                if ( $file->isValid()) { //判斷檔案是否有效
+                    $filename = $file->getClientOriginalName(); //檔案原名稱
+                    $extension = $file->getClientOriginalExtension(); //副檔名
+                    $fileName = time() . "." . $extension;    //重新命名
+                    $data['pic'] = $fileName;
+                    $path = $file->storeAs('public/pic',$fileName); //儲存至指定目錄
+                }
+            }
+            dd($data);
+            return $data;
+        }else{
+            // dd($request->file('pic'));
+            return $request->all();
+        }
     }
 
     /**
@@ -92,19 +112,4 @@ class ArticleController extends Controller
         //
     }
 
-    //自訂中文(中日韓亞洲語系雙bytes)打亂 方法
-    public function mb_str_shuffle($str){ 
-
-        $ret = array();
-        $cotype = mb_detect_encoding($str);   //偵測編碼
-  
-        for ($i=0; $i<mb_strlen($str, $cotype); $i++){
-           array_push($ret, mb_substr($str, $i, 1, $cotype));
-        }
-  
-        shuffle($ret);
-        return join($ret);
-  
-     }
-  
 }

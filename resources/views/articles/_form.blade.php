@@ -4,7 +4,7 @@
         {!! Form::text('subject', null, [
                                         'id'=>'faketitle',
                                         'class' => 'article',
-                                        'style' => 'color:red;',
+                                        'style' => 'color:blue;',
                                         'placeholder' => '請輸入標題',
                                         'otherAttr' => '自訂屬性'
                                     ]) !!}
@@ -18,7 +18,7 @@
         {{-- Category 類別 --}}
         <br><br>
         {!! Form::label('category', '類別', []) !!} (共5類)
-        {!! Form::number('category', 0, ['min'=>1 , 'max'=>5]) !!}
+        {!! Form::number('category', 3, ['min'=>1 , 'max'=>5]) !!}
         @error('category')
             <div {{ $errTipAttr }} >{{ $message }}</div>
         @enderror 
@@ -29,6 +29,7 @@
         {!! Form::label('desc', '內文') !!}<br>
         {!! Form::textarea('desc', null, [
                                         'id'=>'fakecontent',
+                                        'style'=>'color:blue;',
                                         'cols'=>60,
                                         'rows'=>5
                                     ]) !!}
@@ -56,7 +57,7 @@
         <br><br>
         {!! Form::label('sort', '排序方式？') !!}<br>
         {!! Form::label('sort', '排序', []) !!} (共2種：1升冪, 2降冪)
-        {!! Form::number('sort', 0, ['min'=>1 , 'max'=>2]) !!}
+        {!! Form::number('sort', 2, ['min'=>1 , 'max'=>2]) !!}
         @error('sort')
             <div {{ $errTipAttr }} >{{ $message }}</div>
         @enderror
@@ -71,13 +72,23 @@
         @enderror
 
 
-    
+        {{-- tags 標籤 --}}
         <br><br>
         {!! Form::label('tags', '標籤') !!}<br>
         新聞 {!! Form::checkbox('tags[]', 'news', false) !!}
         技能 {!! Form::checkbox('tags[]', 'skill', false) !!}
         喜好 {!! Form::checkbox('tags[]', 'like', true) !!}
         @error('tags')
+            <div {{ $errTipAttr }} >{{ $message }}</div>
+        @enderror
+
+
+
+        {{-- pic 圖片(檔案上傳) --}}
+        <br><br>
+        {!! Form::label('pic', '圖片上傳', []) !!}<br><br>
+        {!! Form::file('pic') !!}
+        @error('pic')
             <div {{ $errTipAttr }} >{{ $message }}</div>
         @enderror
     

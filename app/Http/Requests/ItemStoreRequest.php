@@ -33,9 +33,11 @@ class ItemStoreRequest extends FormRequest
         ];
     }
 
-/*     public function msg(){
+    /*
+    public function msg(){
         $msg = [
             'required' => 'title、price 欄位必填.'  //rules method 的 required field
         ];
     }
- */}
+    */
+}

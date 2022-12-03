@@ -30,7 +30,8 @@ class ArticleStoreRequest extends FormRequest
             'status' => 'boolean',
             'sort' => 'required | integer',
             'enable_at' => 'string',  //'date' ?
-            // 'tags' => 'string'   //如何於前台驗證套件將array to string
+            // 'tags' => 'string',
+            // 'pic' => 'string'
         ];
     }
 }

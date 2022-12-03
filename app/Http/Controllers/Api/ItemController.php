@@ -28,7 +28,8 @@ class ItemController extends Controller
      */
     public function store(ItemStoreRequest $request)
     {
-        dd($request);
+        return $request->all();
+
         $data = json_decode($request->getContent);
         return response()->json($data);
     }
