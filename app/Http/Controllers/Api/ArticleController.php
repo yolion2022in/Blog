@@ -2,26 +2,11 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Models\Post;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 
-class PostController extends Controller
+class ArticleController extends Controller
 {
-    //用於生成 JSON 字串
-    private function makeJson($status, $data, $msg)
-    {
-        //轉 JSON 時確保中文不會變成 Unicode
-        return response()
-        ->json(['status' => $status, 'data' => $data, 'message' => $msg])
-        ->setEncodingOptions(JSON_UNESCAPED_UNICODE);
-    } 
-
-
-
-
-
-
     /**
      * Display a listing of the resource.
      *
@@ -29,14 +14,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::get();
-
-        if(isset($posts) && count($posts) > 0){
-            $data = ['posts' => $posts];
-            return $this->makeJson(1,$data,null);
-        }else{
-            return $this->makeJson(0,null,'找不到任何文章');
-        }
+        //
     }
 
     /**
@@ -58,14 +36,7 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        $post = Post::find($id);
-
-        if(isset($post)){
-            $data = ['post' => $post];
-            return $this->makeJson(1,$data,null);
-        }else{
-            return $this->makeJson(0,null,'找不到該文章');
-        }
+        //
     }
 
     /**

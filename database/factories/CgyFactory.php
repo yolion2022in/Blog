@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use Carbon\Carbon;
+// use Illuminate\Support\Facades\Storage;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -20,7 +21,7 @@ class CgyFactory extends Factory
         return ['subject'=>$this->faker->realText(15), 
             // 'subject'=>$this->faker->sentence, 
             'enabled'=>$this->faker->randomElement([true,false]), 
-            'desc'=>$this->faker->image('public\storage\pic', 640, 480),
+            'desc'=>$this->faker->imageUrl(1024,768,'descript'),
             'enabled_at'=> Carbon::createFromFormat('Y-m-d',$this->faker->date)
         ];
     }

@@ -59,7 +59,7 @@ class ArticleController extends Controller
                     $path = $file->storeAs('public/pic',$fileName); //儲存至指定目錄
                 }
             }
-            dd($data);
+            // dd($data);
             return $data;
         }else{
             // dd($request->file('pic'));

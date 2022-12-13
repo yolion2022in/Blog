@@ -17,7 +17,11 @@ return new class extends Migration
             $table->id();
             $table->string('subject',100);
             $table->text('content');
-            $table->bigInteger('cgy_id');
+
+            // $table->bigInteger('cgy_id');
+            $table->foreignId('cgy_id')->constrained(); //外來鍵關係
+
+
             $table->boolean('enabled')->default(true);
             $table->integer('sort')->default(0);
             $table->timestamp('enabled_at')->nullable;
@@ -34,6 +38,10 @@ return new class extends Migration
      */
     public function down()
     {
+        Schema::table('articles', function (Blueprint $table) {
+            $table->dropForeign(['cgy_id']);
+        });
+        
         Schema::dropIfExists('articles');
     }
 };
